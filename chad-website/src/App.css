@@ -1,15 +1,18 @@
 .App {
   text-align: center;
+  overflow-x: hidden;
 }
 
 .hide {
   opacity: 0;
-  transition: opacity 1s;
+  transform: scale(0.75, 0.75);
+  transition: all 0.5s;
 }
 
 .show {
   opacity: 1;
-  transition: opacity 1s;
+  transform: scale(1, 1);
+  transition: all 0.5s;
 }
 
 .App-logo {
@@ -33,11 +36,88 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#meet-the-band-image{
+  background-image: url("https://res.cloudinary.com/siouxcitymusic/image/upload/v1561523200/theBand.jpg");
+  background-position: 100% 0%;
+  height: 300px;
+  width: 500px;
+  border-radius: 5px;
+  border: solid black 2px;
+}
+
+#meet-sarah-image {
+  background-image: url("https://res.cloudinary.com/siouxcitymusic/image/upload/v1561523710/Sarah.jpg");
+  background-position: 60% 0%;
+  height: 380px;
+  width: 300px;
+  border-radius: 5px;
+  border: solid black 2px;
+}
+
+#meet-the-band-text{
+  font-size: 36px;
+  display: block;
+}
+
+#meet-sarah-text{
+  max-width: 300px;
+  font-size: 20px;
+  font-family: 'Indie Flower', cursive;
+}
+
+#meet-the-band-container{
+  /* border: 2px gray solid;
+  padding: 15px;
+  border-radius: 10px; */
+  font-family: 'Indie Flower', cursive;
+}
+
+#band{
+  /* border-top: solid gray 1px;
+  border-bottom: solid gray 1px; */
+  /* box-shadow: 10px 10px 20px gray; */
+}
+
+.left-show {
+  animation-name: leftShow;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.right-show {
+  animation-name: rightShow;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.left-hide {
+  animation-name: leftHide;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.right-hide {
+  animation-name: rightHide;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes leftShow {
+  from {transform: translateX(100vw)}
+  to {transform: translateX(0vw)}
+}
+
+@keyframes rightShow {
+  from {transform: translateX(-100vw)}
+  to {transform: translateX(0vw)}
+}
+
+@keyframes leftHide {
+  from {transform: translateX(0vw)}
+  to {transform: translateX(-100vw)}
+}
+
+@keyframes rightHide {
+  from {transform: translateX(0vw)}
+  to {transform: translateX(100vw)}
 }
