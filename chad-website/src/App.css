@@ -54,12 +54,62 @@
   border: solid black 2px;
 }
 
+#meet-trevor-image {
+  background-image: url("https://res.cloudinary.com/siouxcitymusic/image/upload/v1561523568/Trevor.jpg");
+  background-position: 60% 0%;
+  height: 380px;
+  width: 300px;
+  border-radius: 5px;
+  border: solid black 2px;
+  background-size: 300px;
+}
+
+#meet-zach-image {
+  background-image: url("https://res.cloudinary.com/siouxcitymusic/image/upload/v1561523106/zach.jpg");
+  background-position: 30% 0%;
+  height: 380px;
+  width: 300px;
+  border-radius: 5px;
+  border: solid black 2px;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+#meet-alex-image {
+  background-image: url("https://res.cloudinary.com/siouxcitymusic/image/upload/v1561523586/Alex.jpg");
+  background-position: 60% 0%;
+  height: 380px;
+  width: 300px;
+  border-radius: 5px;
+  border: solid black 2px;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
 #meet-the-band-text{
   font-size: 36px;
   display: block;
 }
 
 #meet-sarah-text{
+  max-width: 300px;
+  font-size: 20px;
+  font-family: 'Indie Flower', cursive;
+}
+
+#meet-trevor-text{
+  max-width: 300px;
+  font-size: 20px;
+  font-family: 'Indie Flower', cursive;
+}
+
+#meet-zach-text{
+  max-width: 300px;
+  font-size: 20px;
+  font-family: 'Indie Flower', cursive;
+}
+
+#meet-alex-text{
   max-width: 300px;
   font-size: 20px;
   font-family: 'Indie Flower', cursive;
@@ -78,28 +128,65 @@
   /* box-shadow: 10px 10px 20px gray; */
 }
 
+#left-band-arrow{
+  display: block;
+  position: absolute;
+  font-size: 50px;
+  left: 10px;
+  top: 40%;
+  cursor: pointer;
+  z-index: 5;
+  opacity: 0;
+  animation-name: arrowsAppear;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  font-family: 'Indie Flower', cursive;
+}
+
+#right-band-arrow{
+  display: block;
+  position: absolute;
+  font-size: 50px;
+  right: 10px;
+  top: 40%;
+  cursor: pointer;
+  z-index: 5;
+  opacity: 0;
+  animation-name: arrowsAppear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  font-family: 'Indie Flower', cursive;
+}
+
 .left-show {
   animation-name: leftShow;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
 .right-show {
   animation-name: rightShow;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
 .left-hide {
   animation-name: leftHide;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
 .right-hide {
   animation-name: rightHide;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
+}
+
+@keyframes arrowsAppear {
+  from {opacity: 0}
+  to {opacity: 1}
 }
 
 @keyframes leftShow {
