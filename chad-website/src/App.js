@@ -16,7 +16,9 @@ export class App extends React.Component {
       currentBandSlide: 1,
       bandSlideDirection: "right",
       bandSlide1: "",
-      bandSlide2: ""
+      bandSlide2: "",
+      musicSlide1: "",
+      musicSlide2: ""
     };
     
     this.componentDidMount = this.componentDidMount.bind(this)
@@ -78,10 +80,17 @@ export class App extends React.Component {
     )
     ]
     this.bandSlideLanding = (
-      <div id="meet-the-band-container" style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
+      <div onClick={this.startBandSlide} id="meet-the-band-container" style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", cursor: "pointer"}}>
               <div id="meet-the-band-image">
               </div>
               <span id="meet-the-band-text" onClick={this.startBandSlide} style={{cursor: "pointer"}}>Meet the band --></span>
+      </div>
+    )
+    this.musicSlideLanding = (
+      <div id="music-landing-container" style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", cursor: "pointer"}}>
+              <div id="music-landing-image">
+              </div>
+              <span id="meet-the-band-text" style={{cursor: "pointer"}}>The Music --></span>
       </div>
     )
   }
@@ -91,7 +100,9 @@ export class App extends React.Component {
 
     this.setState({
       bandSlide1: this.bandSlideLanding,
-      bandSlide2: this.bandSlides[0]
+      bandSlide2: this.bandSlides[0],
+      musicSlide1: this. musicSlideLanding,
+      musicSlide2: this.bandSlides[0]
     })
     
     document.addEventListener("scroll", function(){
@@ -233,12 +244,13 @@ export class App extends React.Component {
   render(){
     return (
       <div className="App" style={{backgroundColor:"white"}}>
+        <div id="navbar"></div>
         <div id="logo" style={{backgroundColor: "white", height: "100vh", marginBottom: "200px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-          <img src="https://res.cloudinary.com/siouxcitymusic/image/upload/v1561436554/35928765_151362302397573_5730718706355404800_n.jpg" style={{height: "400px"}}/>
+          <img src="https://res.cloudinary.com/siouxcitymusic/image/upload/v1561436554/35928765_151362302397573_5730718706355404800_n.jpg" style={{height: "600px"}}/>
         </div>
-        <div id="band" className="hide" style={{backgroundColor: "white", height: "400px", marginBottom: "200px"}}>
-        {this.state.currentBandIndex !== null?<span id="left-band-arrow" onClick={this.bandLeftArrow}>&lt;-</span>:""}
-        {this.state.currentBandIndex !== null?<span id="right-band-arrow" onClick={this.bandRightArrow}>-&gt;</span>:""}
+        <div id="band" className="hide" style={{backgroundColor: "white", height: "560px", marginBottom: "200px"}}>
+          {this.state.currentBandIndex !== null?<span id="left-band-arrow" onClick={this.bandLeftArrow}>&lt;-</span>:""}
+          {this.state.currentBandIndex !== null?<span id="right-band-arrow" onClick={this.bandRightArrow}>-&gt;</span>:""}
           <div id="band-slide-1" style={{position: "absolute", marginLeft: "auto", marginRight: "auto", marginTop: "auto", marginBottom: "auto", left: "0", right: "0", top: "0", bottom: "0"}} className={this.getBandSlideOneClasses()}>
             {this.state.bandSlide1}
           </div>
@@ -246,10 +258,17 @@ export class App extends React.Component {
             {this.state.bandSlide2}
           </div>
         </div>
-        <div id="music" className="hide" style={{backgroundColor: "green", height: "400px", marginBottom: "400px"}}></div>
-        <div id="photos" style={{backgroundColor: "blue", height: "400px", marginBottom: "400px"}}></div>
-        <div id="events" style={{backgroundColor: "red", height: "400px", marginBottom: "400px"}}></div>
-        <div id="contact" style={{backgroundColor: "green", height: "400px", marginBottom: "200px"}}></div>
+        <div id="music" className="hide" style={{backgroundColor: "white", height: "560px", marginBottom: "400px"}}>
+        <div id="music-slide-1" style={{position: "absolute", marginLeft: "auto", marginRight: "auto", marginTop: "auto", marginBottom: "auto", left: "0", right: "0", top: "0", bottom: "0"}} className={this.getBandSlideOneClasses()}>
+            {this.state.musicSlide1}
+          </div>
+          <div id="music-slide-2" style={{position: "absolute", marginLeft: "auto", marginRight: "auto", left: "0", right: "0"}} className={this.getBandSlideTwoClasses()}>
+            {this.state.bandSlide2}
+          </div>
+        </div>
+        <div id="photos" style={{backgroundColor: "blue", height: "560px", marginBottom: "400px"}}></div>
+        <div id="events" style={{backgroundColor: "red", height: "560px", marginBottom: "400px"}}></div>
+        <div id="contact" style={{backgroundColor: "green", height: "560px", marginBottom: "200px"}}></div>
       </div>
     );
   }
