@@ -53,6 +53,21 @@
   border: solid black 2px;
 }
 
+#meet-chad-image-icon {
+  background-image: url("https://res.cloudinary.com/siouxcitymusic/image/upload/v1561436554/35928765_151362302397573_5730718706355404800_n.jpg");
+  background-position: 40% 29%;
+  background-size: 110%;
+  height: 70px;
+  width: 70px;
+  border-radius: 5px;
+  border: solid black 2px;
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
 #meet-sarah-image {
   background-image: url("https://res.cloudinary.com/siouxcitymusic/image/upload/v1564634563/659A9654.jpg");
   background-position: 80% 40%;
@@ -60,6 +75,21 @@
   width: 400px;
   border-radius: 5px;
   border: solid black 2px;
+}
+
+#meet-sarah-image-icon {
+  background-image: url("https://res.cloudinary.com/siouxcitymusic/image/upload/v1564634563/659A9654.jpg");
+  background-position: 40% 29%;
+  background-size: 600%;
+  height: 70px;
+  width: 70px;
+  border-radius: 5px;
+  border: solid black 2px;
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
 #meet-trevor-image {
@@ -70,6 +100,21 @@
   border-radius: 5px;
   border: solid black 2px;
   /* background-size: 300px; */
+}
+
+#meet-trevor-image-icon {
+  background-image: url("https://res.cloudinary.com/siouxcitymusic/image/upload/v1564634859/DSC02639.jpg");
+  background-position: 65% 4%;
+  background-size: 290%;
+  height: 70px;
+  width: 70px;
+  border-radius: 5px;
+  border: solid black 2px;
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
 #meet-zach-image {
@@ -83,6 +128,21 @@
   background-size: auto 100%;
 }
 
+#meet-zach-image-icon {
+  background-image: url("https://res.cloudinary.com/siouxcitymusic/image/upload/v1564634113/zachLarge.jpg");
+  background-position: 60% 20%;
+  background-size: 220%;
+  height: 70px;
+  width: 70px;
+  border-radius: 5px;
+  border: solid black 2px;
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
 #meet-alex-image {
   background-image: url("https://res.cloudinary.com/siouxcitymusic/image/upload/v1561523586/Alex.jpg");
   background-position: 60% 0%;
@@ -92,6 +152,26 @@
   border: solid black 2px;
   background-size: auto 100%;
   background-repeat: no-repeat;
+}
+
+#meet-alex-image-icon {
+  background-image: url("https://res.cloudinary.com/siouxcitymusic/image/upload/v1561523586/Alex.jpg");
+  background-position: 20% 0%;
+  background-size: 270%;
+  height: 70px;
+  width: 70px;
+  border-radius: 5px;
+  border: solid black 2px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.active-icon {
+  box-shadow: 10px 10px rgb(255, 192, 168);
+  transform: translateY(-10px);
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
 #meet-the-band-text{
